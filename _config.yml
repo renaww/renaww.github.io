@@ -14,14 +14,14 @@ email: wowthemesnet@gmail.com
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
+  Rena:
+    name: Rena
+    display_name: Rena
     avatar: 'assets/images/avatar-sal.png'
     email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/donate/
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Memoirs, a Bootstrap Medium styled template available for Jekyll. You are currently previewing Jekyll template demo."
+    web: 
+    twitter: 
+    description: 
 
 # Plugins
 plugins:

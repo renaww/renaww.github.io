@@ -5,6 +5,7 @@ author: sal
 categories: [ Lifestyle ]
 tags: [ France ]
 image: assets/images/2.jpg
+comments: false
 rating: 4.5
 ---
 
@@ -19,3 +20,5 @@ Following a renovation of the hotel in 1981–85, the restaurant occupied a form
 Les Ambassadeurs had two Michelin stars. In the last decade of its operation, chef was Dominique Bouchet  followed by Jean-François Piège and finally when the hotel closed in 2013 for an extended renovation, Christopher Hache.
 
 In 2017 Hache opened a smaller restaurant, L'Écrin, within the renovated hotel; the former space of Les Ambassadeurs became a bar.
+
+![Test image](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
