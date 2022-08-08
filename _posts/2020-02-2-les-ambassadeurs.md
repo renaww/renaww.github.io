@@ -21,4 +21,4 @@ Les Ambassadeurs had two Michelin stars. In the last decade of its operation, ch
 
 In 2017 Hache opened a smaller restaurant, L'Écrin, within the renovated hotel; the former space of Les Ambassadeurs became a bar.
 
-![Test image](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
+![Test image](assets/images/2.jpg)
