@@ -20,7 +20,7 @@ Over the course of 4 weeks, we attended lectures, participated in exercises, and
 
 During this course, I worked with my cousin. She is a minimum data set (MDS) and floor nurse at an assisted living home, managing a floor of 12-14 patients in critical condition, and recently received a  PhD in nursing with research focusing on dementia/alzheimer's care. In my initial interview, I asked her about her own challenges at work, as well as challenges she has obseerved in her residents' daily living. Boiled down, she identified multiple issues and/or potential solutions which have been listed below:
 
-<mark>Regarding residents</mark>
+##### Regarding residents
 - CULTURAL CLASH: With residents from many different cultural backgrounds, many residents don't enjoy the activities they are currently presented with, which they've never been introduced to until arriving at the nursing home. Especially in those with dementia this clash is more striking, since they tend to enjoy and remember only things from when they were young, base upon original culture.
 - CULTURAL BRIDGING: To help with these residents' missing cultural connections, my co-designer suggested a way to bridge these residents with younger generations of the same culture, giving the elderly a form of social connection but also giving the younger generations a mentor in life.
 - MEMORY TRACING: While residents with memory loss may not fully comprehend the current situation, part of their memories still reacts to "pleasant events"--memories from earlier in life. Thus, these "pleasant events" are often a good way to stimulate the memories of residents with dementia. Assembling these pictures and memories into one interactive "photobook", accompanied with narration from relatives, may be a way to use tech and help make finding "plesant events" easier.
@@ -29,15 +29,14 @@ During this course, I worked with my cousin. She is a minimum data set (MDS) and
 - MEDICATION MANAGEMENT: Many older adults actually move to nursing homes because they are taking a lot of medications, so having a more streamlined solution for this would help them live much more independently.
 - ASSISTIVE TECH COST: Many current assistive technologies like dentures and hearing aids are extremely easy to lose. At the same time however, they are very expensive to replace. So, my co-designer brought up the idea of using rapid manufacturing techniques to create these technologies for cheaper, while still maintaining their personalization.
 
-<mark>Regarding caretakers</mark>
-- COVID contact tracing: Currently, if a patient becomes COVID-positive, the patient has to list all their contacts and the nursing home contact-traces that way. However, if there was a way to track the residents' COVID exposure automatically, this would be a huge imporvement
+##### Regarding caretakers
+- COVID CONTACT TRACING: Currently, if a patient becomes COVID-positive, the patient has to list all their contacts and the nursing home contact-traces that way. However, if there was a way to track the residents' COVID exposure automatically, this would be a huge imporvement on behalf of the nursing home facilitators.
+- VACCINATION TRACKING: Due to COVID the vaccination requirements at my co-designer's nursing home have become much stricter. With multiple steps and stages that need to be logged. However there is no efficient system to do so--currently everything is being tracked with an Excel sheet, which cannot handle data from all the residents and employees. So, a more efficient tracking method would be greatly beneficial to smoother hospital administration.
+- PRESSURE ULCERS: Since many residents are bed-ridden, they tend to develop pressure ulcers. To prevent these, caretakers currently have to reposition the patient every 2 hours, which adds lots of extra time to the caretakers' schedules. If there was a way to automate this, for example a bed that could reposition itself, this would not only ensure residents get timely repositioning, but also take a load of stress of the caretakers.
+- INFECTION TRACKING: Nursing home managers often have to track cross-contamination. If one person gets a disease, nurses will measure what bacteria, tract...etc and watch if anyone else gets the same tract nearby, in which case there is a high probability of contamination. However, currently much of this is up to human judgement and my co-designer mentioned it would be greatly helpful if a computer could help more accurately detect and notify of cross-contamination
 
-> It was decorated in an 18th-century rococo style, redesigned by Sybille de Margérie with furnishings by Sonia Rykiel.
+##### Affecting both parties
+- HYDARTION: On the patient side, many residents affected by memory loss forget to drink water. Coupled with a weakening sense of thirstiness, residents can often become dehydrated without realizing--in fact my co-designer mentioned numerous cases of patients who came in and simply needed to rehydrate. On the healthcare worker side, she brought up the fact that many of her co-workers and her went entire shifts without drinking water--it was simply too inconvenient, and being faced with an immensly busy schedule time would pass in an instant.
 
-Following a renovation of the hotel in 1981–85, the restaurant occupied a former private ballroom with windows looking out on the Place de la Concorde, a few hundred meters from the Palaprois Garnier. 
-
-Les Ambassadeurs had two Michelin stars. In the last decade of its operation, chef was Dominique Bouchet  followed by Jean-François Piège and finally when the hotel closed in 2013 for an extended renovation, Christopher Hache.
-
-In 2017 Hache opened a smaller restaurant, L'Écrin, within the renovated hotel; the former space of Les Ambassadeurs became a bar.
-
-![Test image](assets/images/2.jpg)
+# Problem Selection: Dehydartion
+yes.
