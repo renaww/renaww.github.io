@@ -34,6 +34,7 @@ During this course, I worked with my cousin. She is a minimum data set (MDS) and
 - VACCINATION TRACKING: Due to COVID the vaccination requirements at my co-designer's nursing home have become much stricter. With multiple steps and stages that need to be logged. However there is no efficient system to do so--currently everything is being tracked with an Excel sheet, which cannot handle data from all the residents and employees. So, a more efficient tracking method would be greatly beneficial to smoother hospital administration.
 - PRESSURE ULCERS: Since many residents are bed-ridden, they tend to develop pressure ulcers. To prevent these, caretakers currently have to reposition the patient every 2 hours, which adds lots of extra time to the caretakers' schedules. If there was a way to automate this, for example a bed that could reposition itself, this would not only ensure residents get timely repositioning, but also take a load of stress of the caretakers.
 - INFECTION TRACKING: Nursing home managers often have to track cross-contamination. If one person gets a disease, nurses will measure what bacteria, tract...etc and watch if anyone else gets the same tract nearby, in which case there is a high probability of contamination. However, currently much of this is up to human judgement and my co-designer mentioned it would be greatly helpful if a computer could help more accurately detect and notify of cross-contamination
+- ELECTRONIC MEDICAL RECORDS: The point click care software used for nursing home management was something my co-designer also reflected could be more efficient. Currently, the computers are also mounted on stationary carts, so when administering medication, nurses often have to rush between the room and cart, which greatly reduces the efficiency of their work.
 
 ##### Affecting both parties
 - HYDRATION: On the patient side, many residents affected by memory loss forget to drink water. Coupled with a weakening sense of thirstiness, residents can often become dehydrated without realizing--in fact my co-designer mentioned numerous cases of patients who came in and simply needed to rehydrate. On the healthcare worker side, she brought up the fact that many of her co-workers and her went entire shifts without drinking water--it was simply too inconvenient, and being faced with an immensly busy schedule time would pass in an instant.
@@ -43,4 +44,11 @@ After reviewing everything my co-designer brought up, I eventually settled on th
 
 > 37% of older people admitted to the emergency department were dehydrated, and, of these, 62% were still dehydrated 48 hours after admission (El-Sharkawy et al, 2014)
 
-My co-designer also described her personal struggle with remembering to keep hydrated: 
+My co-designer also described her personal struggle with remembering to keep hydrated: working night shifts and managing an entire wing, each patient has a strict schedule they need to follow. She begins the shift with wound care and updating patient statuses, before rushing to check diabetic patients' insulin levels and administering their dosage at the exact time during dinner. After another round of nighttime medications, only then does she begin writing patient documentation. This entire process ends well into the night, at around 11pm and with so many moving parts she simply forgets to drink water--even while knowing the negative effects of doing so. Furthermore, with the PPE required, and water bottle being in a separate room from their main station, it is simply inconvenient to get water, also contributing to the caretaker dehydration issue.
+
+So, given that dehydration has become prevalent in both parties: the caretaker and patient, I had an idea:
+***How could I leverage technology to create a solution that reminds <ins>both</ins> caretakers and patients to stay hydrated?***
+
+With that, I set out to develop a single solution that could solve a problem for both parties...
+
+# Idea Generation
