@@ -36,7 +36,11 @@ During this course, I worked with my cousin. She is a minimum data set (MDS) and
 - INFECTION TRACKING: Nursing home managers often have to track cross-contamination. If one person gets a disease, nurses will measure what bacteria, tract...etc and watch if anyone else gets the same tract nearby, in which case there is a high probability of contamination. However, currently much of this is up to human judgement and my co-designer mentioned it would be greatly helpful if a computer could help more accurately detect and notify of cross-contamination
 
 ##### Affecting both parties
-- HYDARTION: On the patient side, many residents affected by memory loss forget to drink water. Coupled with a weakening sense of thirstiness, residents can often become dehydrated without realizing--in fact my co-designer mentioned numerous cases of patients who came in and simply needed to rehydrate. On the healthcare worker side, she brought up the fact that many of her co-workers and her went entire shifts without drinking water--it was simply too inconvenient, and being faced with an immensly busy schedule time would pass in an instant.
+- HYDRATION: On the patient side, many residents affected by memory loss forget to drink water. Coupled with a weakening sense of thirstiness, residents can often become dehydrated without realizing--in fact my co-designer mentioned numerous cases of patients who came in and simply needed to rehydrate. On the healthcare worker side, she brought up the fact that many of her co-workers and her went entire shifts without drinking water--it was simply too inconvenient, and being faced with an immensly busy schedule time would pass in an instant.
 
-# Problem Selection: Dehydartion
-yes.
+# Problem Selection: Dehydration
+After reviewing everything my co-designer brought up, I eventually settled on the final problem: dehydration. Different from all the other issues she'd mentioned, dehydration had impact on both patients and the workers taking care of them. My co-designer told a story of an elderly woman that came into the nursing home, sleepy every day and literally needing to be pinched to wake up. After talking with a doctor however, the issue was simply dehydration--after receiving some IV fluids, she was like a whole other person. In fact, after more research, cases like this were far more common than they appeared to be.
+
+> 37% of older people admitted to the emergency department were dehydrated, and, of these, 62% were still dehydrated 48 hours after admission (El-Sharkawy et al, 2014)
+
+My co-designer also described her personal struggle with remembering to keep hydrated: 
