@@ -51,4 +51,28 @@ So, given that dehydration has become prevalent in both parties: the caretaker a
 
 With that, I set out to develop a single solution that could solve a problem for both parties...
 
+# User Needs and Requirements
+Taking my co-designer's description of the problem, I developed a set of user needs, which I then finalized into concrete requirements, as listed in the table below:
+| User Needs                                          | Product Requirements                                              |
+| --------------------------------------------------- | ----------------------------------------------------------------- |
+| Passive dehydration tracking                        | Continuously monitors dehydration and alerts when water is needed |
+| Low cost                                            | Use only the parts that are necessary                             |
+| Easy to incorporate into preexisting daily routines | Minimal size and bulkiness                                        |
+| No interference with daily activities               | Wearable or easy to carry around, minimal amount of manual input  |
+| Low maintenance                                     | Minimal setup and charging required                               |
+| Usable for everyone                                 | WCAG compliant display, streamlined UI                            |
+| Intuitive operation                                 | Minimal features, Understandable UI                               |
+
 # Idea Generation
+When speaking about dehydration in the initial interview, my co-designer had mentioned that a way to detect dehydration and remind the user of it would be extremely helpful. So, I began digging into what sort of hydration detection-and-reminding solutions were out there already, and evaluated them based on the two key factors for hydration sensing that my co-designer identified: accuracy and usability. Essentially, the proposed solution needed to provide a fairly accurate reading (considering its potential usage in a medical setting) while also being usable--easy to carry around, not likely to waste additional time using, and simple enough for elderly residents to use on their own. With these considerations, I created the competitor matrix shown below:
+
+![Intial idea competitor matrix](assets\images\hydration pouch\competitor matrix.png)
+
+On the bottom left were solutions that were neither usable nor accurate: things like the skin pinch test and hydration app (requiring users to manually input everything). Smartwatches were also placed in this category, as they were not continuously monitoring dehydration or simply were not market-validated. On the much more accurate side was blood tests, however these were even less usable as they required the user to get a blood test and wait for results every time they wanted to measure dehydration. 
+
+Conversely, on the bottom right was the smart water bottle--a much more usable solution that could be easily incorporated into the user's daily life. However, since these bottles are bulky and not very portable, and the user cannot have a water bottle on them at all times, there are also significant drawbacks in terms of usability. Furthermore, these are not very accurate, as these bottles are essentially just a timer or simply assume the user drinks from the same water bottle. Finally, there are the two best solutions: small, portable hydration sensor. One option I looked into used MRI technology, however it was still far too bulky to be a passive dehydration monitor and also was not technologically developed enough for commercial usage. The other option was a wearable biosensor. While these fulfilled much of the product requirements, there were again significant drawbacks: the sensing patches were single-usage, making them expensive and inconvenient to keep on replacing. Additionally, the app interface the sensor connects to was much more complex, with tables and graphs and data that elderly residents would likely not be able to comprehend--or need.
+
+#### *Essentially, the proposed to device woudl aim to passively detect and notify when users are at risk of dehydration, while being easily accesible for all user groups*
+
+# Idea #1
+My co-designer currently wears an iwatch, and the device needed to be as minimally intrusive as possible so my first thought was to include 
