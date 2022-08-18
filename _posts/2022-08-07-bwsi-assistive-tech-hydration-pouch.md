@@ -109,7 +109,7 @@ Taking my co-designer's description of the problem, I developed a set of user ne
 # Idea Generation
 When speaking about dehydration in the initial interview, my co-designer had mentioned that a way to detect dehydration and remind the user of it would be extremely helpful. So, I began digging into what sort of hydration detection-and-reminding solutions were out there already, and evaluated them based on the two key factors for hydration sensing that my co-designer identified: accuracy and usability. Essentially, the proposed solution needed to provide a fairly accurate reading (considering its potential usage in a medical setting) while also being usable--easy to carry around, not likely to waste additional time using, and simple enough for elderly residents to use on their own. With these considerations, I created the competitor matrix shown below:
 
-![Intial idea competitor matrix](C:\Rena\renaww.github.io\assets\images\hydration pouch\competitor matrix.png)
+![Intial idea competitor matrix](../assets/images/hydration pouch/competitor matrix.png)
 
 On the bottom left were solutions that were neither usable nor accurate: things like the skin pinch test and hydration app (requiring users to manually input everything). Smartwatches were also placed in this category, as they were not continuously monitoring dehydration or simply were not market-validated. On the much more accurate side was blood tests, however these were even less usable as they required the user to get a blood test and wait for results every time they wanted to measure dehydration. 
 
@@ -121,8 +121,8 @@ Conversely, on the bottom right was the smart water bottle--a much more usable s
 # Idea #1
 My co-designer currently wears an iwatch, and the device needed to be as minimally intrusive as possible so my first thought was to create some sort of watch-based device. Specifically, using measurable vital signs to find a correlation with dehydration and providing notifications that way.
 
-![Initial idea sketches](../assets/images/hydration pouch/idea 1.png)
 *The sketch of my initial idea*
+![Initial idea sketches](../assets/images/hydration pouch/idea 1.png)
 
 But first, I needed to see if dehydration could even be accurately predicted with basic vital signs. So, I set out to create a model that could correlate vital signs like heart rate and pulse oximetry with osmolality--a blood indicator, which Thomas, David R., et al. (2008) found to be suggestive of impending dehydration if between 295-300. Using Beth Israel Deaconess Medical Center's MIMIC III database of 51 clinical variables from 46,520 patients, I was able to filter the set for 4 vital signs that on-the-market sensors are able to detect: heart rate, respiration rate, temperature, and pulse oximetry. The set also contained blood urea nitrogen (BUN), plasma glucose, blood sodium, and blood potassium, from which osmolality was calculated.
 
@@ -131,8 +131,7 @@ But first, I needed to see if dehydration could even be accurately predicted wit
 
 
 Then using tensorflow, I began to construct multi-input models to predict osmolality from the 4 input variables. First, I tried a standard multi-input linear regression--however this produced too much error (in fact too much that it did not show when graphed). So, I constructed a deep neural network instead, and this time, as shown in the comparison images below, the results were much more favorable. When graphed, the error for each epoch (pass through training data) showed a steady decrease until it was near 0 around the 100th epoch for the deep neural network model (right side), whereas the error for linear regression, on the left, was still over 10 (outside of the graph). 
-
-![regression vs dnn results](../Rena/renaww.github.io/assets/images/hydration pouch/model graphs.png)
+![regression vs dnn results](../assets/images/hydration pouch/model graphs.png)
 
 Hello
 ![idk](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
