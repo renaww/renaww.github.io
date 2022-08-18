@@ -65,45 +65,6 @@ Taking my co-designer's description of the problem, I developed a set of user ne
 | Usable for everyone                                 | WCAG compliant display, streamlined UI                            |
 | Intuitive operation                                 | Minimal features, Understandable UI                               |
 
-<!--
-<article class="markdown-body"><table>
-<thead>
-<tr>
-<th>User Needs</th>
-<th>Product Requirements</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Passive dehydration tracking</td>
-<td>Continuously monitors dehydration and alerts when water is needed</td>
-</tr>
-<tr>
-<td>Low cost</td>
-<td>Use only the parts that are necessary</td>
-</tr>
-<tr>
-<td>Easy to incorporate into preexisting daily routines</td>
-<td>Minimal size and bulkiness</td>
-</tr>
-<tr>
-<td>No interference with daily activities</td>
-<td>Wearable or easy to carry around, minimal amount of manual input</td>
-</tr>
-<tr>
-<td>Low maintenance</td>
-<td>Minimal setup and charging required</td>
-</tr>
-<tr>
-<td>Usable for everyone</td>
-<td>WCAG compliant display, streamlined UI</td>
-</tr>
-<tr>
-<td>Intuitive operation</td>
-<td>Minimal features, Understandable UI</td>
-</tr>
-</tbody></table>
-</article>-->
-
 <p></p>
 
 # Idea Generation
@@ -133,6 +94,5 @@ But first, I needed to see if dehydration could even be accurately predicted wit
 Then using tensorflow, I began to construct multi-input models to predict osmolality from the 4 input variables. First, I tried a standard multi-input linear regression--however this produced too much error (in fact too much that it did not show when graphed). So, I constructed a deep neural network instead, and this time, as shown in the comparison images below, the results were much more favorable. When graphed, the error for each epoch (pass through training data) showed a steady decrease until it was near 0 around the 100th epoch for the deep neural network model (right side), whereas the error for linear regression, on the left, was still over 10 (outside of the graph). 
 ![regression vs dnn results](../assets/images/hydration pouch/model graphs.png)
 
-Hello
-![idk](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
+
 
