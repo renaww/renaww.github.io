@@ -54,7 +54,7 @@ With that, I set out to develop a single solution that could solve a problem for
 # User Needs and Requirements
 Taking my co-designer's description of the problem, I developed a set of user needs, which I then finalized into concrete requirements, as listed in the table below:
 
-<table>
+
 | User Needs                                          | Product Requirements                                              |
 | --------------------------------------------------- | ----------------------------------------------------------------- |
 | Passive dehydration tracking                        | Continuously monitors dehydration and alerts when water is needed |
@@ -64,7 +64,44 @@ Taking my co-designer's description of the problem, I developed a set of user ne
 | Low maintenance                                     | Minimal setup and charging required                               |
 | Usable for everyone                                 | WCAG compliant display, streamlined UI                            |
 | Intuitive operation                                 | Minimal features, Understandable UI                               |
-</table>
+
+<article class="markdown-body"><table>
+<thead>
+<tr>
+<th>User Needs</th>
+<th>Product Requirements</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Passive dehydration tracking</td>
+<td>Continuously monitors dehydration and alerts when water is needed</td>
+</tr>
+<tr>
+<td>Low cost</td>
+<td>Use only the parts that are necessary</td>
+</tr>
+<tr>
+<td>Easy to incorporate into preexisting daily routines</td>
+<td>Minimal size and bulkiness</td>
+</tr>
+<tr>
+<td>No interference with daily activities</td>
+<td>Wearable or easy to carry around, minimal amount of manual input</td>
+</tr>
+<tr>
+<td>Low maintenance</td>
+<td>Minimal setup and charging required</td>
+</tr>
+<tr>
+<td>Usable for everyone</td>
+<td>WCAG compliant display, streamlined UI</td>
+</tr>
+<tr>
+<td>Intuitive operation</td>
+<td>Minimal features, Understandable UI</td>
+</tr>
+</tbody></table>
+</article>
 
 <p></p>
 
