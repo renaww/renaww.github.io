@@ -10,6 +10,9 @@ comments: false
 
 *July 11 - August 7, 2022*
 
+[Co-designer Introduction](https://renaww.github.io/bwsi-assistive-tech-hydration-pouch/#my-co-designer)
+[Problem Selection: Dehydration](https://renaww.github.io/bwsi-assistive-tech-hydration-pouch/#problem-selection-dehydration)
+
 During the summer of 2022, I was selected to be part of Beaverworks Summer Institute (BWSI), an engineering summer program for high school students hosted by MIT's Lincoln Laboratory. Specifically, I was part of the assistive technology (AT) course, where each of us picked a **co-designer** to design an assistive technology with.
 
 > **CO-DESIGNER:** the end users we worked with to desgin a product for. Their input was especially important throughout the build process, and after each iteration we would go to them for testing and feedback. In that sense, they were more like another designer, hence the name **co-designer**.
@@ -75,7 +78,7 @@ On the bottom left were solutions that were neither usable nor accurate: things 
 
 Conversely, on the bottom right was the smart water bottle--a much more usable solution that could be easily incorporated into the user's daily life. However, since these bottles are bulky and not very portable, and the user cannot have a water bottle on them at all times, there are also significant drawbacks in terms of usability. Furthermore, these are not very accurate, as these bottles are essentially just a timer or simply assume the user drinks from the same water bottle. Finally, there are the two best solutions: small, portable hydration sensor. One option I looked into used MRI technology, however it was still far too bulky to be a passive dehydration monitor and also was not technologically developed enough for commercial usage. The other option was a wearable biosensor. While these fulfilled much of the product requirements, there were again significant drawbacks: the sensing patches were single-usage, making them expensive and inconvenient to keep on replacing. Additionally, the app interface the sensor connects to was much more complex, with tables and graphs and data that elderly residents would likely not be able to comprehend--or need.
 
-#### *Essentially, the proposed to device woudl aim to passively detect and notify when users are at risk of dehydration, while being easily accesible for all user groups*
+#### *Essentially, the proposed to device would aim to passively detect and notify when users are at risk of dehydration, while being easily accesible for all user groups*
 <p></p>
 
 # Idea #1
@@ -94,12 +97,56 @@ Then using tensorflow, I began to construct multi-input models to predict osmola
 ![regression vs dnn results](../assets/images/hydration pouch/model graphs.png)
 
 Furthermore, looking at mean absolute error (the sum of absolute errors divided by sample size) it was even more clear that the deep neural network (DNN) was more effective. 
+
 |                      | Mean absolute error [Osmolality] |
 | -------------------- | -------------------------------- |
 | Linear model         | 68.286270                        |
 | Neural network model | 0.365076                         |
 
+  <!--<article class="markdown-body"><table>
+<thead>
+<tr>
+<th>User Needs</th>
+<th>Product Requirements</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Passive dehydration tracking</td>
+<td>Continuously monitors dehydration and alerts when water is needed</td>
+</tr>
+<tr>
+<td>Low cost</td>
+<td>Use only the parts that are necessary</td>
+</tr>
+<tr>
+<td>Easy to incorporate into preexisting daily routines</td>
+<td>Minimal size and bulkiness</td>
+</tr>
+<tr>
+<td>No interference with daily activities</td>
+<td>Wearable or easy to carry around, minimal amount of manual input</td>
+</tr>
+<tr>
+<td>Low maintenance</td>
+<td>Minimal setup and charging required</td>
+</tr>
+<tr>
+<td>Usable for everyone</td>
+<td>WCAG compliant display, streamlined UI</td>
+</tr>
+<tr>
+<td>Intuitive operation</td>
+<td>Minimal features, Understandable UI</td>
+</tr>
+</tbody></table>
+</article>-->
+
 In fact, when I ran through the test dataset and plotted the actual vs. predicted values on this DNN model, it was extremely accurate--so in short, yes, at least with this dataset these vital signs and osmolality did have a high correlation...
 ###### Note: in the image below the predictions and true values should be for [Osmolality], not [HCO3]--it has been wrongly captioned
 ![Actual vs predicted values for DNN](../assets/images/hydration pouch/actual vs predicted.png)
 
+# However, there were major issues...
+***On the technical side:***
+While there was a strong *correlation* between the vital signs and osmolality, there was really no causation between the two: there was very little scientific backing behind these variables, and when I attempted to graph the individual variables vs osmolality, points were completely scattered as well. Thus, especially with usage in a medical setting, it would not be trustworthy and the model was guesswork at best. Furthermore, the dataset I used was measured with professional medical equipment with the most accurate methods (ie. measuring heart rate on the heart), whereas to build this device, I would have to use on-the-market electronic sensors that would be far less accurate than medical equipment, especially considering that everything would have to be measured from the wrist. 
+***On the human usage side:***
+When reviewing this idea, I realized that my co-designer also currently owns an iwatch. Considering that the device could also have a much broader usage base--including other healthcare workers or anyone who needs a hydration reminder--it would be counterintuitive to build a whole other watch for the sole purpose of hydration, and there is really no point in wearing a second watch.      
