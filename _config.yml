@@ -1,0 +1,7 @@
+title: Rena Wang - Portfolio
+baseurl: "" # important for GitHub Pages
+markdown: kramdown
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
