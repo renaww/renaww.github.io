@@ -1,4 +1,4 @@
-/* styles.css - Modern, minimal style */
+/* styles.css - modern and minimal */
 
 :root {
   --accent: #2c5eff;
@@ -56,7 +56,8 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   width: 100%;
 }
 
@@ -65,47 +66,6 @@ nav a:hover::after {
   font-size: 1rem;
   color: var(--accent);
   text-decoration: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-decoration: none;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-  color: inherit;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card img {
-  width: 100%;
-  display: block;
-}
-
-.card .text {
-  padding: 1rem;
-}
-
-.card h2 {
-  font-size: 1.1rem;
-  margin: 0 0 0.4rem;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin: 0;
 }
 
 h1 {
@@ -120,16 +80,134 @@ h1 {
   margin-bottom: 1rem;
 }
 
+/* HOMEPAGE PROFILE INTRO */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+.intro-text {
+  flex: 1;
+}
+.intro-text h1 {
+  margin: 0;
+}
+.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* PROJECT CARD GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.card .text {
+  padding: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover h2 {
+  color: var(--accent);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* GALLERY PAGE */
+.gallery-subtitle {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.grid.gallery img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ABOUT PAGE */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+.about-pic {
+  width: 280px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+.about ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+.about li {
+  margin-bottom: 0.5rem;
+}
+
+/* PROJECT PAGE LAYOUT */
 .project-image {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
-
 .content p {
   margin-bottom: 1rem;
 }
-
 .back-link {
   display: inline-block;
   margin-bottom: 1rem;
@@ -143,10 +221,5 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-  }
-
-  nav .nav-links a {
-    margin-left: 0;
-    margin-right: 1rem;
   }
 }
