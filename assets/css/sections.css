@@ -1,26 +1,60 @@
-/* Section - specific styling*/
+:root{
+  --text:#3a4351;          /* charcoal */
+  --muted:#6b778c;         /* optional secondary text */
+  --highlight:#ffcd90;     /* soft blue highlight */
+}
 
-/* HOMEPAGE PROFILE INTRO */
-.intro {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+main{ padding-inline: clamp(1rem, 4vw, 3rem); }
+
+/* Intro layout */
+.intro{
+  display:flex;
+  align-items:center;
+  gap: clamp(1rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 4rem auto 3rem;
 }
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
+
+.profile-pic{
+  width: clamp(140px, 28vw, 280px);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 30px rgba(0,0,0,.08);
 }
-.intro-text {
-  flex: 1;
+
+/* Text styles */
+.intro-text h1{
+  margin: 0 0 .5rem 0;
+  font-weight: 800;
+  color: var(--text);
+  font-size: clamp(1.9rem, 4.6vw, 3.25rem);
+  letter-spacing: -0.02em;
 }
-.intro-text h1 {
+
+.intro-text p{
   margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  max-width: 40ch;         /* similar line length to the mock */
 }
-.highlight {
-  color: var(--accent);
-  font-weight: 500;
+
+/* “marker” style highlight*/
+.intro .highlight{
+  background: linear-gradient(transparent 62%, var(--highlight) 62%);
+  border-radius: .15em;
+  padding: 0 .1em;
+  box-decoration-break: clone;   /* keep highlight across line wraps */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 720px){
+  .intro{
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-text p{
+    margin-inline: auto;
+  }
 }
