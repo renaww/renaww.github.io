@@ -13,6 +13,16 @@
 
 main{ padding-inline: clamp(1rem, 4vw, 3rem); }
 
+/* make sure icons in the navbar are visible */
+.navbar .nav-link i,
+.navbar .nav-link .fa,
+.navbar .nav-link .fa-solid {
+  display: inline-block !important;
+  margin-right: .4rem;   /* spacing before text */
+  line-height: 1;
+  font-size: 1em;
+}
+
 /* Intro layout */
 .intro{
   display: flex;
@@ -54,6 +64,7 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
     color: var(--text);
     margin:0;
     font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+    line-height: 1.6;
     font-weight: 400;
 }
 
