@@ -1,0 +1,26 @@
+/* Section - specific styling*/
+
+/* HOMEPAGE PROFILE INTRO */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+.intro-text {
+  flex: 1;
+}
+.intro-text h1 {
+  margin: 0;
+}
+.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
