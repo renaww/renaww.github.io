@@ -2581,36 +2581,44 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-/* line 64, node_modules/bootstrap/scss/_buttons.scss */
+/* Override Bootstrap primary button with orange palette */
 .btn-primary {
   color: #fff;
-  background-color: #bd081c;
-  border-color: #bd081c; }
-  /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
-  .btn-primary:hover {
-    color: #fff;
-    background-color: #980617;
-    border-color: #8c0615; }
-  /* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
-  .btn-primary:focus, .btn-primary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(189, 8, 28, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(189, 8, 28, 0.5); }
-  /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
-  .btn-primary.disabled, .btn-primary:disabled {
-    color: #fff;
-    background-color: #bd081c;
-    border-color: #bd081c; }
-  /* line 36, node_modules/bootstrap/scss/mixins/_buttons.scss */
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #8c0615;
-    border-color: #800513; }
-    /* line 46, node_modules/bootstrap/scss/mixins/_buttons.scss */
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(189, 8, 28, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(189, 8, 28, 0.5); }
+  background-color: #FF7B00;   /* brand-600 */
+  border-color: #FF7B00;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #FF8D21;   /* brand-500 */
+  border-color: #FF8D21;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.5); /* brand-600 with alpha */
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #FF7B00;   /* brand-600 */
+  border-color: #FF7B00;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #FFA652;   /* brand-400 */
+  border-color: #FFA652;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.5);
+}
 
 /* line 64, node_modules/bootstrap/scss/_buttons.scss */
 .btn-secondary {
