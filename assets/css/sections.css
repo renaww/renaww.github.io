@@ -44,7 +44,10 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
 }
 
 .intro-text h6{
-    color: var(--text)
+    color: var(--text);
+    margin:0;
+    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+    font-weight: 500;
 }
 
 /* “marker” style highlight*/
