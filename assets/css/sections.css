@@ -54,7 +54,7 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
     color: var(--text);
     margin:0;
     font-size: clamp(1.05rem, 2.2vw, 1.5rem);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .intro-text a{
