@@ -8,7 +8,7 @@ baseurl: ''
 email: 'renaw@mit.edu'
 
 include: ["_pages"]
-permalink: /:title/
+permalink: pretty
 
 # Plugins
 plugins: 
