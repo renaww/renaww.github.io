@@ -20,7 +20,7 @@ permalink: "/research-and-technical/"
     
     <div class="card-columns">
         {% for category in site.categories %}
-            {% if category[0] == "free"%}
+            {% if category[0] == "Free"%}
             {% assign pages_list = category[1] %}
             {% for post in pages_list %}
                 {% if post.title != null %}
