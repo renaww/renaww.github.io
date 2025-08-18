@@ -23,6 +23,11 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
   font-size: 1em;
 }
 
+.navbar .nav-link .fas {
+  font-weight: 900 !important;
+  font-family: "Font Awesome 5 Free" !important;
+}
+
 /* Intro layout */
 .intro{
   display: flex;
@@ -131,6 +136,7 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
 .cta:hover{
   transform: translateY(-1px);
   background-image: linear-gradient(transparent 62%, var(--brand-500) 62%);
+  color: var(--brand-700)
 }
 .cta:active{ transform: translateY(0); }
 
