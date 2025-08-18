@@ -1,7 +1,14 @@
 :root{
   --text:#3a4351;          /* charcoal */
   --muted:#6b778c;         /* optional secondary text */
-  --highlight:#ffcd90;     /* soft blue highlight */
+  --highlight:#ffcd90;
+  --brand-700: #df6c00;
+  --brand-600:#FF7B00;
+  --brand-500:#FF8D21;
+  --brand-400:#FFA652;
+  --brand-300:#FFB76B;
+  --brand-200:#FFCD90;
+  --brand-50: #FFF4DF;     
 }
 
 main{ padding-inline: clamp(1rem, 4vw, 3rem); }
@@ -50,6 +57,10 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
     font-weight: 500;
 }
 
+.intro-text a{
+    color: var(--brand-700);
+}
+
 /* “marker” style highlight*/
 .intro .highlight{
   background: linear-gradient(transparent 62%, var(--highlight) 62%);
@@ -66,5 +77,60 @@ main{ padding-inline: clamp(1rem, 4vw, 3rem); }
   }
   .intro-text p{
     margin-inline: auto;
+  }
+}
+
+/* Row layout */
+.cta-row{
+  display:flex;
+  gap: clamp(.5rem, 2vw, 1rem);
+  flex-wrap: wrap;                 /* wraps on small screens */
+  align-items:center;
+  margin-top: 1.1rem;
+}
+
+/* “Text button” base: looks like text with a soft marker underline */
+.cta{
+  position:relative;
+  display:inline-block;
+  font-weight: 700;
+  font-size: clamp(.98rem, 1.6vw, 1.05rem);
+  letter-spacing: .01em;
+  color: var(--ink);
+  text-decoration:none;
+  padding: .25rem .2rem;          /* breathing room around the marker */
+  border-radius: .35rem;           /* for nicer selection/focus shape */
+
+  /* marker underline (sits behind text) */
+  background-image: linear-gradient(transparent 62%, var(--brand-200) 62%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: background-color .2s ease, transform .06s ease, background-image .2s ease;
+  box-decoration-break: clone;     /* keep highlight across wraps */
+}
+
+/* Variants use adjacent tones to feel cohesive */
+.cta-primary   { background-image: linear-gradient(transparent 62%, var(--brand-400) 62%); }
+.cta-secondary { background-image: linear-gradient(transparent 62%, var(--brand-300) 62%); }
+.cta-tertiary  { background-image: linear-gradient(transparent 62%, var(--brand-200) 62%); }
+
+/* Hover / active states */
+.cta:hover{
+  transform: translateY(-1px);
+  background-image: linear-gradient(transparent 62%, var(--brand-500) 62%);
+}
+.cta:active{ transform: translateY(0); }
+
+/* Accessible focus ring */
+.cta:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px var(--brand-50), 0 0 0 6px var(--brand-400);
+  border-radius: .4rem;
+}
+
+/* Mobile stacking under intro text */
+@media (max-width: 720px){
+  .cta-row{
+    justify-content: center;      /* center the row when stacked under the image */
   }
 }
