@@ -31,7 +31,7 @@
                 {{ category }}
               </a>
             {% endfor %}
-            <p>Short Description</p>
+            <p style="color:white">Short Description</p>
         </div>
 
     </div>
@@ -41,10 +41,10 @@
          
         <img class="card-img" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}" alt="{{ post.title }}">             
         
-            <div class="notraco" style="justify-content:space-between; align-items: center;">
+            <div class="notraco">
                 <h2 class="card-title title">{{ post.title }}</h2>
                 <p>testing</p>
-                <div class="more" style="align-items: center;">                
+                <div class="more">                
                     <i class="fa fa-arrow-circle-right text-muted" aria-hidden="true"></i>
                 </div>  
             </div>

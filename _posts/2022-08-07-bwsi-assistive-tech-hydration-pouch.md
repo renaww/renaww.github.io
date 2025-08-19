@@ -2,7 +2,7 @@
 title:  "BWSI Assistive Technology - The Hydration Pouch"
 metadata: "hide"
 categories: [Free, UI, Graphics]
-image: assets\images\hydration pouch\product image.png
+image: "assets/images/hydration pouch/product image.png"
 visit: "https://crmrkt.com/jVMvBb"
 ---
 

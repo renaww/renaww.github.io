@@ -4,7 +4,7 @@ layout: default
 <section class="pt-5 pb-5">    
     <div class="container">
     	<div class="row justify-content-center">
-    		<div class="col-md-8" style="flex:0 0 90%; max-width: 90%;">
+    		<div class="col-md-8" style="flex:0 0 90%; max-width: 90%; padding-left: 0;">
                 
     			<article class="card">
                  
@@ -23,8 +23,6 @@ layout: default
                             , by {{page.author | capitalize}} 
                         {% endif %}
                     </small>                    
-                    
-    				{{ content }}
                     
     			</div>
                 {% if page.image %}
@@ -46,6 +44,7 @@ layout: default
                         # {{ category | downcase }}
                       </a>
                     {% endfor %}
+                    {{ content }}
                 </div>
                 
                 

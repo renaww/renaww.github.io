@@ -1,0 +1,42 @@
+---
+title: "Design and Creative"
+layout: default
+permalink: "/design-and-creative/"
+---
+
+<section class="mt-4 mb-5">
+    
+    <!--<div class="container mb-1">
+        <h1 class="font-weight-bold title">Categories</h1>    
+        <div class="row">
+        {% include menu-categories.html %}
+        </div>
+    </div>-->
+
+
+<div class="container-fluid">
+    <h1 class="font-weight-bold title">🎨 Design and Creative</h1>  
+    <h3 class="mt-2 display-4" id="free"><small class="text-muted"> 
+        A selection of research-driven projects at the intersection of engineering, computation, and human-centered design.
+    </small></h3><hr>
+    
+    <div class="card-columns">
+        {% for category in site.categories %}
+            {% if category[0] == "Free"%}
+            {% assign pages_list = category[1] %}
+            {% for post in pages_list %}
+                {% if post.title != null %}
+                    {% if group == null or group == post.group %}
+                        {% include card-post.html %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+    
+</section>
