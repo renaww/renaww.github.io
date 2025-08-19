@@ -186,5 +186,6 @@ a{
 
 .showcat-descrip {
     color: white;
-    background-color:linear-gradient(transparent 62%, var(--text) 62%);
+    background-color: var(--brand-600);
+    font-size: 1.2rem;
 }

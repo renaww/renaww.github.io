@@ -2,7 +2,7 @@
 title:  "BWSI Assistive Technology - The Hydration Pouch"
 description: "Dehydration monitoring and alert system"
 metadata: "hide"
-categories: [Free, UI, Graphics, Research/Technical]
+categories: [Research/Technical]
 image: "assets/images/hydration pouch/product image.png"
 visit: "https://crmrkt.com/jVMvBb"
 ---
@@ -71,7 +71,7 @@ Taking my co-designer's description of the problem, I developed a set of user ne
 
 # Idea Generation
 When speaking about dehydration in the initial interview, my co-designer had mentioned that a way to detect dehydration and remind the user of it would be extremely helpful. So, I began digging into what sort of hydration detection-and-reminding solutions were out there already, and evaluated them based on the two key factors for hydration sensing that my co-designer identified: accuracy and usability. Essentially, the proposed solution needed to provide a fairly accurate reading (considering its potential usage in a medical setting) while also being usable--easy to carry around, not likely to waste additional time using, and simple enough for elderly residents to use on their own. With these considerations, I created the competitor matrix shown below:
-![Intial idea competitor matrix](../assets/images/hydration pouch/competitor matrix.png)
+![Intial idea competitor matrix](/assets/images/hydration pouch/competitor matrix.png)
 
 On the bottom left were solutions that were neither usable nor accurate: things like the skin pinch test and hydration app (requiring users to manually input everything). Smartwatches were also placed in this category, as they were not continuously monitoring dehydration or simply were not market-validated. On the much more accurate side was blood tests, however these were even less usable as they required the user to get a blood test and wait for results every time they wanted to measure dehydration. 
 
@@ -89,7 +89,7 @@ My co-designer currently wears an iwatch, and the device needed to be as minimal
 But first, I needed to see if dehydration could even be accurately predicted with basic vital signs. So, I set out to create a model that could correlate vital signs like heart rate and pulse oximetry with osmolality--a blood indicator, which Thomas, David R., et al. (2008) found to be suggestive of impending dehydration if between 295-300. Using Beth Israel Deaconess Medical Center's MIMIC III database of 51 clinical variables from 46,520 patients, I was able to filter the set for 4 vital signs that on-the-market sensors are able to detect: heart rate, respiration rate, temperature, and pulse oximetry. The set also contained blood urea nitrogen (BUN), plasma glucose, blood sodium, and blood potassium, from which osmolality was calculated.
 
 *Formula for blood osmolality, Thomas, David R., et al. (2008)*
-![Osmolality calculation](./assets/images/hydration pouch/osmolality calculation.png)
+![Osmolality calculation](/assets/images/hydration pouch/osmolality calculation.png)
 
 
 Then using tensorflow, I began to construct multi-input models to predict osmolality from the 4 input variables. First, I tried a standard multi-input linear regression--however this produced too much error (in fact too much that it did not show when graphed). So, I constructed a deep neural network instead, and this time, as shown in the comparison images below, the results were much more favorable. When graphed, the error for each epoch (pass through training data) showed a steady decrease until it was near 0 around the 100th epoch for the deep neural network model (right side), whereas the error for linear regression, on the left, was still over 10 (outside of the graph). 
@@ -102,47 +102,10 @@ Furthermore, looking at mean absolute error (the sum of absolute errors divided 
 | Linear model         | 68.286270                        |
 | Neural network model | 0.365076                         |
 
-  <!--<article class="markdown-body"><table>
-<thead>
-<tr>
-<th>User Needs</th>
-<th>Product Requirements</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Passive dehydration tracking</td>
-<td>Continuously monitors dehydration and alerts when water is needed</td>
-</tr>
-<tr>
-<td>Low cost</td>
-<td>Use only the parts that are necessary</td>
-</tr>
-<tr>
-<td>Easy to incorporate into preexisting daily routines</td>
-<td>Minimal size and bulkiness</td>
-</tr>
-<tr>
-<td>No interference with daily activities</td>
-<td>Wearable or easy to carry around, minimal amount of manual input</td>
-</tr>
-<tr>
-<td>Low maintenance</td>
-<td>Minimal setup and charging required</td>
-</tr>
-<tr>
-<td>Usable for everyone</td>
-<td>WCAG compliant display, streamlined UI</td>
-</tr>
-<tr>
-<td>Intuitive operation</td>
-<td>Minimal features, Understandable UI</td>
-</tr>
-</tbody></table>
-</article>-->
 
 In fact, when I ran through the test dataset and plotted the actual vs. predicted values on this DNN model, it was extremely accurate--so in short, yes, at least with this dataset these vital signs and osmolality did have a high correlation...
 ###### Note: in the image below the predictions and true values should be for [Osmolality], not [HCO3]--it has been wrongly captioned
-![Actual vs predicted values for DNN](../assets/images/hydration pouch/actual vs predicted.png)
+![Actual vs predicted values for DNN](/assets/images/hydration pouch/actual vs predicted.png)
 
 # However, there were major issues...
 ***On the technical side:***

@@ -40,7 +40,7 @@ layout: default
                     {% endif %}
                     
                     {% for category in page.categories %}
-                      <a class="btn btn-sm btn-primary mt-2" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
+                      <a class="btn btn-sm btn-primary mt-2" href="{{site.baseurl}}/categories.html#{{ category | downcase }}" style="margin-bottom:2rem">
                         # {{ category | downcase }}
                       </a>
                     {% endfor %}
