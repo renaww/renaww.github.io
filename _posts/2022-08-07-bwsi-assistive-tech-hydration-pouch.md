@@ -1,11 +1,9 @@
 ---
-layout: post
 title:  "BWSI Assistive Technology - The Hydration Pouch"
-author: Rena
-categories: []
-tags: []
+metadata: "hide"
+categories: [Free, UI, Graphics]
 image: assets\images\hydration pouch\product image.png
-comments: false
+visit: "https://crmrkt.com/jVMvBb"
 ---
 
 *July 11 - August 7, 2022*
