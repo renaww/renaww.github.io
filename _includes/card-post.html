@@ -24,15 +24,11 @@
              <a href="{{site.baseurl}}{{post.url}}" class="text-dark"><i class="fa fa-arrow-circle-right"></i> More
              </a>
          </span> 
-
-        <div class="showcat">
-            {% for category in post.categories %}
-              <a class="btn btn-sm btn-danger mb-1" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
-                {{ category }}
-              </a>
-            {% endfor %}
-            <p style="color:white">Short Description</p>
-        </div>
+        {% if post.description %}
+            <div class="showcat">
+                <p class="showcat-descrip">{{post.description}}</p>
+            </div>
+        {% endif %}
 
     </div>
            
@@ -43,7 +39,6 @@
         
             <div class="notraco">
                 <h2 class="card-title title">{{ post.title }}</h2>
-                <p>testing</p>
                 <div class="more">                
                     <i class="fa fa-arrow-circle-right text-muted" aria-hidden="true"></i>
                 </div>  

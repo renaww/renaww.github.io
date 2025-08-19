@@ -183,3 +183,8 @@ a{
 .notraco .more i {
   font-size: 1.5rem;   /* increase arrow size (default ~1rem) */
 }
+
+.showcat-descrip {
+    color: white;
+    background-color:linear-gradient(transparent 62%, var(--text) 62%);
+}

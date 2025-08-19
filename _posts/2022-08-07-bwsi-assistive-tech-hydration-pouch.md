@@ -1,7 +1,8 @@
 ---
 title:  "BWSI Assistive Technology - The Hydration Pouch"
+description: "Dehydration monitoring and alert system"
 metadata: "hide"
-categories: [Free, UI, Graphics]
+categories: [Free, UI, Graphics, Research/Technical]
 image: "assets/images/hydration pouch/product image.png"
 visit: "https://crmrkt.com/jVMvBb"
 ---
@@ -83,12 +84,12 @@ Conversely, on the bottom right was the smart water bottle--a much more usable s
 My co-designer currently wears an iwatch, and the device needed to be as minimally intrusive as possible so my first thought was to create some sort of watch-based device. Specifically, using measurable vital signs to find a correlation with dehydration and providing notifications that way.
 
 *The sketch of my initial idea*
-![Initial idea sketches](../assets/images/hydration pouch/idea 1.png)
+![Initial idea sketches](/assets/images/hydration pouch/idea 1.png)
 
 But first, I needed to see if dehydration could even be accurately predicted with basic vital signs. So, I set out to create a model that could correlate vital signs like heart rate and pulse oximetry with osmolality--a blood indicator, which Thomas, David R., et al. (2008) found to be suggestive of impending dehydration if between 295-300. Using Beth Israel Deaconess Medical Center's MIMIC III database of 51 clinical variables from 46,520 patients, I was able to filter the set for 4 vital signs that on-the-market sensors are able to detect: heart rate, respiration rate, temperature, and pulse oximetry. The set also contained blood urea nitrogen (BUN), plasma glucose, blood sodium, and blood potassium, from which osmolality was calculated.
 
 *Formula for blood osmolality, Thomas, David R., et al. (2008)*
-![Osmolality calculation](../assets/images/hydration pouch/osmolality calculation.png)
+![Osmolality calculation](./assets/images/hydration pouch/osmolality calculation.png)
 
 
 Then using tensorflow, I began to construct multi-input models to predict osmolality from the 4 input variables. First, I tried a standard multi-input linear regression--however this produced too much error (in fact too much that it did not show when graphed). So, I constructed a deep neural network instead, and this time, as shown in the comparison images below, the results were much more favorable. When graphed, the error for each epoch (pass through training data) showed a steady decrease until it was near 0 around the 100th epoch for the deep neural network model (right side), whereas the error for linear regression, on the left, was still over 10 (outside of the graph). 
